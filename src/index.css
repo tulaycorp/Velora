@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 33% 96%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 199 89% 16%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 43%;
+  --accent: 173 80% 36%;
+  --accent-foreground: 0 0% 100%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 173 80% 36%;
+  --success: 160 84% 39%;
+  --warning: 35 92% 53%;
+  --danger: 350 89% 60%;
+  --info: 199 89% 48%;
+  --radius: 0.8rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background bg-dashboard-grid bg-[size:28px_28px] text-foreground antialiased;
+    font-family: "Manrope Variable", sans-serif;
+  }
+
+  ::selection {
+    @apply bg-teal-100 text-slate-950;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+}
